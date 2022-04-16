@@ -7,7 +7,7 @@ Now updated for 1.18.2 & Java 17. This version is ONLY compatible with 1.18.2 & 
 ## Changes
 * Updated Java from 8 to 17, this version is only for 1.18.2 & Java 17.
 * Removed tons of redundant code, random leftover developer print debugs, empty methods etc.
-* Fixed bugs #180,#183,#201 from original repo issues
+* Fixed bugs #180,#183,#201 & #202 from original repo issues
 * Made ArrowReturn only give the single arrow back, instead of 2
 * Updated POM, removed original dev's hard coded output file path, default target/ directory now
 
