@@ -1,6 +1,6 @@
 ![image](https://i.imgur.com/3MpRXfn.png)
 
-# KitPvP (Updated to 1.18.2 & Java 17)
+# KitPvP
 An all-in-one battle plugin built using customizable kits and features.
 Now updated for 1.18.2 & Java 17. This version is ONLY compatible with 1.18.2 & Java 17 or above.
 
