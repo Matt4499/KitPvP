@@ -1,8 +1,6 @@
 package com.planetgallium.kitpvp.util;
-
 import com.sk89q.worldguard.protection.flags.Flags;
 import com.sk89q.worldguard.protection.flags.StateFlag;
-
 public enum WorldGuardFlag {
     PASSTHROUGH,
     BUILD,
@@ -92,16 +90,12 @@ public enum WorldGuardFlag {
     DENY_MESSAGE,
     ENTRY_DENY_MESSAGE,
     EXIT_DENY_MESSAGE;
-
-    private byte version = WorldGuardAPI.getInstance().version;
+    private final byte version = WorldGuardAPI.getInstance().version;
     private StateFlag flag;
-
     public StateFlag getFlag() {
         if (flag != null)
             return flag;
-
         String flagName = name();
-
         try {
             Class<?> flagClass = version == 6 ? Class.forName("com.sk89q.worldguard.protection.flags.DefaultFlag") : Flags.class;
             flag = (StateFlag) flagClass.getDeclaredField(flagName).get(null);
@@ -109,7 +103,6 @@ public enum WorldGuardFlag {
             System.out.println("[KitPvP] Unsupported flag! WorldGuard version " + version + " ; flag " + flagName);
             e.printStackTrace();
         }
-
         return flag;
     }
 }
